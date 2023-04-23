@@ -27,10 +27,7 @@ fun AppEntryPoint(
                 )
             }
             is AuthenticatedState.Authenticated -> {
-                AuthenticatedEntryPoint(
-                    authenticatedUser = it.user,
-                    signOut = sessionViewModel::onSignOut,
-                )
+                AuthenticatedEntryPoint()
             }
         }
     }

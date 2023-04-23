@@ -5,10 +5,10 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.communeo.common.data.models.user.AuthenticatedUser
 import com.communeo.mobile.android.core.ui.navigation.BottomAppBarDestination
 import com.communeo.mobile.android.features.feed.ui.viewmodels.PagingFeedViewModel
 import com.communeo.mobile.android.features.feed.ui.views.FeedEntryPoint
+import com.communeo.mobile.android.features.profile.ui.viewmodels.MyProfileViewModel
 import com.communeo.mobile.android.features.profile.ui.views.ProfileEntryPoint
 import com.communeo.mobile.android.features.search.ui.viewmodels.SearchViewModel
 import com.communeo.mobile.android.features.search.ui.views.SearchEntryPoint
@@ -20,17 +20,15 @@ fun AppNavigationHost(
     navController: NavHostController,
     setFloatingActionButtonState: (FloatingActionButtonState) -> Unit,
     setBottomNavigationBarState: (BottomNavigationBarState) -> Unit,
-    authenticatedUser: AuthenticatedUser,
-    signOut: () -> Unit,
 ) {
     NavHost(
         navController = navController,
         startDestination = BottomAppBarDestination.landingDestination.route
     ) {
         composable(route = BottomAppBarDestination.Profile.route) {
+            val myProfileViewModel: MyProfileViewModel = hiltViewModel()
             ProfileEntryPoint(
-                user = authenticatedUser,
-                signOut = signOut,
+                myProfileViewModel = myProfileViewModel,
             )
         }
         composable(route = BottomAppBarDestination.Feed.route) {

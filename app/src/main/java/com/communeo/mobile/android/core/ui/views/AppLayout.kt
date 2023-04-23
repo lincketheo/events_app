@@ -8,7 +8,6 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
-import com.communeo.common.data.models.user.AuthenticatedUser
 import com.communeo.mobile.android.core.ui.components.AppFloatingActionButton
 import com.communeo.mobile.android.core.ui.components.StatefulAppBottomNavigationBar
 import com.example.events.ui.models.common.BottomNavigationBarState
@@ -17,8 +16,6 @@ import com.example.events.ui.models.common.FloatingActionButtonState
 @Composable
 fun StatefulAppLayout(
     navController: NavHostController,
-    authenticatedUser: AuthenticatedUser,
-    signOut: () -> Unit,
 ) {
     var floatingActionButtonState by remember {
         mutableStateOf<FloatingActionButtonState>(FloatingActionButtonState.Visible.Big)
@@ -41,8 +38,6 @@ fun StatefulAppLayout(
         bottomNavigationBarState = bottomNavigationBarState,
         setFloatingActionButtonState = setFloatingActionButtonState,
         setBottomNavigationBarState = setBottomNavigationBarState,
-        authenticatedUser = authenticatedUser,
-        signOut = signOut,
     )
 }
 
@@ -53,8 +48,6 @@ fun StatelessAppLayout(
     bottomNavigationBarState: BottomNavigationBarState,
     setFloatingActionButtonState: (FloatingActionButtonState) -> Unit,
     setBottomNavigationBarState: (BottomNavigationBarState) -> Unit,
-    authenticatedUser: AuthenticatedUser,
-    signOut: () -> Unit,
 ) {
     Scaffold(
         floatingActionButton = {
@@ -95,8 +88,6 @@ fun StatelessAppLayout(
                 navController = navController,
                 setBottomNavigationBarState = setBottomNavigationBarState,
                 setFloatingActionButtonState = setFloatingActionButtonState,
-                authenticatedUser = authenticatedUser,
-                signOut = signOut,
             )
         }
     }

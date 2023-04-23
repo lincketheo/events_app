@@ -92,6 +92,17 @@ fun FeedItemActionBar(
                 comments = comments ?: emptyList()
             )
         }
+
+        /**
+         * Share Screen
+         */
+        AnimatedVisibility(
+            visible = shareOptionShown,
+            enter = slideInHorizontally { -it / 2 } + fadeIn(),
+            exit = slideOutHorizontally { -it / 2 } + fadeOut(),
+        ) {
+            ShareScreen(reset)
+        }
     }
 }
 
