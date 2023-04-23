@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="profile_route_label">Profile</string>
+    <string name="profile_route_descriptor">A profile icon to navigate to the profile</string>
+
+    <string name="feed_route_label">Feed</string>
+    <string name="feed_route_descriptor">A navigation icon to navigate to the feed</string>
+
+    <string name="search_route_label">Search</string>
+    <string name="search_route_description">A search icon to navigate to your social network</string>
+</resources>

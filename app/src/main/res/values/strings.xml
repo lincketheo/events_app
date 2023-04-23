@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">communeo-android</string>
+    <string name="there_was_a_problem_signing_in">There was a problem signing in</string>
+    <string name="something_went_wrong">Something went wrong</string>
+</resources>

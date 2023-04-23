@@ -1,0 +1,125 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
+    id 'org.jlleitschuh.gradle.ktlint'
+}
+
+android {
+    namespace 'com.communeo.mobile.android'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.communeo.mobile.android"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    testOptions {
+        unitTests.includeAndroidResources = true
+        unitTests.returnDefaultValues = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            applicationIdSuffix '.debug'
+            debuggable true
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        // https://developer.android.com/jetpack/androidx/releases/compose-kotlin
+        kotlinCompilerExtensionVersion '1.4.1'
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+tasks.getByPath("preBuild").dependsOn("ktlintFormat")
+
+ktlint {
+    android = true
+    ignoreFailures = false
+    reporters {
+        reporter "plain"
+        reporter "checkstyle"
+        reporter "sarif"
+    }
+    disabledRules = ["no-wildcard-imports"]
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.10.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.1'
+    implementation 'androidx.activity:activity-compose:1.7.1'
+    implementation "androidx.compose.ui:ui:$compose_version"
+    implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
+    implementation 'androidx.compose.material3:material3:1.1.0-rc01'
+    implementation 'androidx.core:core-ktx:1.10.0'
+    implementation "androidx.navigation:navigation-compose:2.5.3"
+
+    debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
+    debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_version"
+
+    // JUnit
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+
+    // Coroutine Tests
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4"
+
+    // Compose Test
+    androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
+    debugImplementation("androidx.compose.ui:ui-test-manifest:$compose_version")
+
+    // Truth
+    testImplementation "com.google.truth:truth:1.1.3"
+    androidTestImplementation "com.google.truth:truth:1.1.3"
+
+    // Hilt
+    implementation "com.google.dagger:hilt-android:2.44.2"
+    implementation 'androidx.hilt:hilt-navigation-compose:1.0.0'
+    kapt "com.google.dagger:hilt-compiler:2.44.2"
+
+    // Coil
+    implementation "io.coil-kt:coil-compose:2.2.2"
+
+    // Image carousel
+    implementation 'com.google.accompanist:accompanist-pager:0.28.0'
+
+    // Local
+    implementation(fileTree(dir: "/home/theo/Development/projects/communeo/communeo-common/build/libs", includes: ["*.jar"]))
+
+    // Multiplatform Aware libraries
+    implementation "io.github.aakira:napier:2.6.1"
+    implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.0")
+
+    // Test Nav controller (https://developer.android.com/guide/navigation/navigation-testing)
+    androidTestImplementation "androidx.navigation:navigation-testing:2.5.3"
+}
+
+kapt {
+    correctErrorTypes true
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="should_fake_session_repository" type="bool">true</item>
+    <item name="should_fake_event_repository" type="bool">true</item>
+    <item name="should_fake_user_repository" type="bool">true</item>
+</resources>
