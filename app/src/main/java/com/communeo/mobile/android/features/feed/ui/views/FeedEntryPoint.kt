@@ -17,13 +17,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
+import com.communeo.mobile.android.core.ui.models.BottomNavigationBarState
+import com.communeo.mobile.android.core.ui.models.FloatingActionButtonState
 import com.communeo.mobile.android.core.ui.util.fullyVisibleIndices
 import com.communeo.mobile.android.core.ui.util.isScrollingUp
 import com.communeo.mobile.android.features.feed.ui.models.FeedUiState
 import com.communeo.mobile.android.features.feed.ui.viewmodels.PagingFeedViewModel
 import com.communeo.mobile.android.features.feed.ui.views.eventitem.FeedItem
-import com.example.events.ui.models.common.BottomNavigationBarState
-import com.example.events.ui.models.common.FloatingActionButtonState
 
 @Composable
 fun FeedEntryPoint(

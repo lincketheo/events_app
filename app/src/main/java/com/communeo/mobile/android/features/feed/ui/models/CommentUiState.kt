@@ -1,6 +1,6 @@
 package com.communeo.mobile.android.features.feed.ui.models
 
-import com.communeo.common.data.models.event.comments.CommentContent
+import com.communeo.mobile.android.features.business.comments.data.models.CommentContent
 
 data class CommentUiState(
     val content: CommentContent,

@@ -2,9 +2,9 @@ package com.communeo.mobile.android.features.profile.ui.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.communeo.common.data.repository.FriendshipRepository
 import com.communeo.mobile.android.core.coroutines.di.ApplicationScope
 import com.communeo.mobile.android.core.logging.CommuneoLoggerFactory
+import com.communeo.mobile.android.features.business.friendships.data.repository.FriendshipRepository
 import com.communeo.mobile.android.features.profile.ui.models.MyProfileState
 import com.communeo.mobile.android.features.session.data.repository.SessionRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -56,7 +56,7 @@ class MyProfileViewModel @Inject constructor(
                 state?.let {
                     state.copy(
                         loadedFriends = friendshipRepository
-                            .getMyFriends(state.user)
+                            .getMyFriends()
                     )
                 } ?: throw IllegalArgumentException(
                     "Tried to load friends for user who's not signed in"
@@ -64,17 +64,17 @@ class MyProfileViewModel @Inject constructor(
             }
 
             /**
-             * Load other friends
+             * Load other friends related data
              */
             _uiState.update { state ->
                 state?.let {
                     state.copy(
                         loadedPendingFriendIRequested = friendshipRepository
-                            .getPendingFriendRequestsISent(state.user),
+                            .getPendingFriendRequestsISent(),
                         loadedPendingFriendsRequestedToMe = friendshipRepository
-                            .getPendingFriendRequestsSentToMe(state.user),
+                            .getPendingFriendRequestsSentToMe(),
                         loadedRejectedFriends = friendshipRepository
-                            .getFriendshipsIRejected(state.user)
+                            .getFriendshipsIRejected()
                     )
                 } ?: throw IllegalArgumentException(
                     "Tried to load friends for user who's not signed in"

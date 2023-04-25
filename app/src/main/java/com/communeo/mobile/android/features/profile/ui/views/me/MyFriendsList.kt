@@ -8,11 +8,11 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.res.painterResource
-import com.communeo.common.data.models.user.PublicUser
 import com.communeo.mobile.android.R
 import com.communeo.mobile.android.core.ui.components.RowOfToggleableTagsWithCheckMarks
 import com.communeo.mobile.android.core.ui.components.ToggleableTag
 import com.communeo.mobile.android.core.ui.components.UserHorizontalBarItem
+import com.communeo.mobile.android.features.business.users.data.models.PublicUser
 
 @Composable
 fun MyFriendsList(

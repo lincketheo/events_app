@@ -1,4 +1,4 @@
-package com.communeo.mobile.android.core.ui
+package com.communeo.mobile.android.core.ui.views
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable

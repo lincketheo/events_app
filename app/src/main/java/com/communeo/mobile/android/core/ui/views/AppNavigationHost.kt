@@ -1,10 +1,12 @@
-package com.communeo.mobile.android.core.ui
+package com.communeo.mobile.android.core.ui.views
 
 import androidx.compose.runtime.Composable
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.communeo.mobile.android.core.ui.models.BottomNavigationBarState
+import com.communeo.mobile.android.core.ui.models.FloatingActionButtonState
 import com.communeo.mobile.android.core.ui.navigation.BottomAppBarDestination
 import com.communeo.mobile.android.features.feed.ui.viewmodels.PagingFeedViewModel
 import com.communeo.mobile.android.features.feed.ui.views.FeedEntryPoint
@@ -12,8 +14,6 @@ import com.communeo.mobile.android.features.profile.ui.viewmodels.MyProfileViewM
 import com.communeo.mobile.android.features.profile.ui.views.ProfileEntryPoint
 import com.communeo.mobile.android.features.search.ui.viewmodels.SearchViewModel
 import com.communeo.mobile.android.features.search.ui.views.SearchEntryPoint
-import com.example.events.ui.models.common.BottomNavigationBarState
-import com.example.events.ui.models.common.FloatingActionButtonState
 
 @Composable
 fun AppNavigationHost(

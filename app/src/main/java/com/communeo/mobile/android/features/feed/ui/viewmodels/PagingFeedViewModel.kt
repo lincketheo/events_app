@@ -2,24 +2,21 @@ package com.communeo.mobile.android.features.feed.ui.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.communeo.common.domain.GetEventFeedUseCase
 import com.communeo.mobile.android.core.logging.CommuneoLoggerFactory
+import com.communeo.mobile.android.features.feed.domain.GetEventFeedUseCase
 import com.communeo.mobile.android.features.feed.ui.models.FeedEventCardUiState
 import com.communeo.mobile.android.features.feed.ui.models.FeedUiState
-import com.communeo.mobile.android.features.session.data.repository.SessionRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
 @HiltViewModel
 class PagingFeedViewModel @Inject constructor(
     private val getEventFeed: GetEventFeedUseCase,
-    private val sessionRepository: SessionRepository,
 ) : ViewModel() {
     private val logger = CommuneoLoggerFactory.getLogger(this)
 
@@ -27,8 +24,8 @@ class PagingFeedViewModel @Inject constructor(
     val uiState = _uiState.asStateFlow()
 
     private var fetchJob: Job? = null
-    private var page = 0
-    private val pageSize = 10
+    private var page = 0U
+    private val pageSize = 10U
     private val triggerNumber = 3
 
     fun consume(eventId: Int) {
@@ -55,13 +52,9 @@ class PagingFeedViewModel @Inject constructor(
 
         // Fetch events
         logger.debug("Fetching events")
-        val events = sessionRepository
-            .currentlySignedInUser
-            .first()?.let { user ->
-                getEventFeed(user.publicUser, page, pageSize)
-            } ?: emptyList()
+        val events = getEventFeed(page, pageSize)
 
-        page += 1
+        page += 1U
         logger.debug("Fetched ${events.size} events")
 
         // Update UI

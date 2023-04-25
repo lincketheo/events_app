@@ -1,4 +1,4 @@
-package com.communeo.mobile.android.core.ui
+package com.communeo.mobile.android.core.ui.views
 
 import androidx.compose.animation.*
 import androidx.compose.foundation.layout.Box
@@ -8,10 +8,8 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
-import com.communeo.mobile.android.core.ui.components.AppFloatingActionButton
-import com.communeo.mobile.android.core.ui.components.StatefulAppBottomNavigationBar
-import com.example.events.ui.models.common.BottomNavigationBarState
-import com.example.events.ui.models.common.FloatingActionButtonState
+import com.communeo.mobile.android.core.ui.models.BottomNavigationBarState
+import com.communeo.mobile.android.core.ui.models.FloatingActionButtonState
 
 @Composable
 fun StatefulAppLayout(

@@ -1,6 +1,6 @@
 package com.communeo.mobile.android.features.session.data.repository
 
-import com.communeo.common.data.models.user.AuthenticatedUser
+import com.communeo.mobile.android.features.business.users.data.models.AuthenticatedUser
 import kotlinx.coroutines.flow.Flow
 
 interface SessionRepository {

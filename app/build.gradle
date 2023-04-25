@@ -4,6 +4,7 @@ plugins {
     id 'kotlin-kapt'
     id 'com.google.dagger.hilt.android'
     id 'org.jlleitschuh.gradle.ktlint'
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.8.20'
 }
 
 android {
@@ -109,8 +110,14 @@ dependencies {
     // Image carousel
     implementation 'com.google.accompanist:accompanist-pager:0.28.0'
 
-    // Retrofit
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    // Ktor
+    def ktor_version = "2.3.0"
+    implementation("io.ktor:ktor-client-core:$ktor_version")
+    implementation("io.ktor:ktor-client-okhttp:$ktor_version") // Android only
+    implementation("io.ktor:ktor-serialization-kotlinx-json:$ktor_version")
+    implementation("io.ktor:ktor-client-content-negotiation:$ktor_version")
+    // implementation("io.ktor:ktor-client-darwin:$ktorVersion") // IOS
+
 
     // Multiplatform Aware libraries
     implementation "io.github.aakira:napier:2.6.1"

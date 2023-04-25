@@ -1,7 +1,7 @@
 package com.communeo.mobile.android.features.profile.ui.models
 
-import com.communeo.common.data.models.user.AuthenticatedUser
-import com.communeo.common.data.models.user.PublicUser
+import com.communeo.mobile.android.features.business.users.data.models.AuthenticatedUser
+import com.communeo.mobile.android.features.business.users.data.models.PublicUser
 
 data class MyProfileState(
     val user: AuthenticatedUser,

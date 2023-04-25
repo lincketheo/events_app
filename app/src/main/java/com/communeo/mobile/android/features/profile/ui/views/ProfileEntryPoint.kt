@@ -3,7 +3,7 @@ package com.communeo.mobile.android.features.profile.ui.views
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import com.communeo.common.data.models.user.PublicUser
+import com.communeo.mobile.android.features.business.users.data.models.PublicUser
 import com.communeo.mobile.android.features.profile.ui.viewmodels.MyProfileViewModel
 import com.communeo.mobile.android.features.profile.ui.views.me.MyProfileEntryPoint
 import com.communeo.mobile.android.features.profile.ui.views.notme.NotMyProfileEntryPoint

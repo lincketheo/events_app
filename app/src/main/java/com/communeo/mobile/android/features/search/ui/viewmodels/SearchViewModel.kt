@@ -1,7 +1,6 @@
 package com.communeo.mobile.android.features.search.ui.viewmodels
 
 import androidx.lifecycle.ViewModel
-import com.communeo.common.data.repository.queries.EventsFilter
 import com.communeo.mobile.android.core.logging.CommuneoLoggerFactory
 import com.communeo.mobile.android.features.search.ui.models.SearchUiState
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -45,12 +44,6 @@ class SearchViewModel @Inject constructor() : ViewModel() {
     fun onEventTagToggled() {
         _uiState.update {
             it.copy(eventsFilterSelected = !it.eventsFilterSelected)
-        }
-    }
-
-    fun onEventFilterChanged(newEventFilter: EventsFilter?) {
-        _uiState.update {
-            it.copy(eventsFilter = newEventFilter)
         }
     }
 }

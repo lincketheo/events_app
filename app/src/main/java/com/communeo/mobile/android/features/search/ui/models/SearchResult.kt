@@ -1,7 +1,7 @@
 package com.communeo.mobile.android.features.search.ui.models
 
-import com.communeo.common.data.models.event.Event
-import com.communeo.common.data.models.user.PublicUser
+import com.communeo.mobile.android.features.business.events.data.models.Event
+import com.communeo.mobile.android.features.business.users.data.models.PublicUser
 
 /**
  * Not pretty, but compromise for lack

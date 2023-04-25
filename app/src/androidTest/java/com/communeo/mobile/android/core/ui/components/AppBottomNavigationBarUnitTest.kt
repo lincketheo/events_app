@@ -6,9 +6,10 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.ComposeNavigator
 import androidx.navigation.testing.TestNavHostController
 import com.communeo.mobile.android.core.ui.components.semantics.appBottomBarSemantics
+import com.communeo.mobile.android.core.ui.models.BottomNavigationBarState
+import com.communeo.mobile.android.core.ui.models.FloatingActionButtonState
+import com.communeo.mobile.android.core.ui.views.StatefulAppBottomNavigationBar
 import com.communeo.mobile.android.util.BaseComposeRuleTest
-import com.example.events.ui.models.common.BottomNavigationBarState
-import com.example.events.ui.models.common.FloatingActionButtonState
 import org.junit.Before
 import org.junit.Test
 

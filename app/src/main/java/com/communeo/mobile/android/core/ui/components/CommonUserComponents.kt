@@ -15,7 +15,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
-import com.communeo.common.data.models.user.PublicUser
+import com.communeo.mobile.android.features.business.users.data.models.PublicUser
 
 @Composable
 fun UserHorizontalBarItem(

@@ -2,9 +2,9 @@ package com.communeo.mobile.android.features.feed.ui.views.eventitem
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
+import com.communeo.mobile.android.core.ui.models.FloatingActionButtonState
 import com.communeo.mobile.android.features.feed.ui.models.FeedEventCardUiState
 import com.communeo.mobile.android.features.feed.ui.views.eventitem.actionbar.FeedItemActionBar
-import com.example.events.ui.models.common.FloatingActionButtonState
 
 @Composable
 fun FeedItem(

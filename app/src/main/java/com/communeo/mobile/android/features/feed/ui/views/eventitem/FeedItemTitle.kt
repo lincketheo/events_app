@@ -8,8 +8,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.communeo.common.data.models.user.PublicUser
 import com.communeo.mobile.android.core.ui.components.UserHorizontalBarItem
+import com.communeo.mobile.android.features.business.users.data.models.PublicUser
 
 @Composable
 fun FeedTitle(

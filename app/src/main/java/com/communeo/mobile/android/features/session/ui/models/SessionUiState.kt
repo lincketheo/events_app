@@ -1,6 +1,6 @@
 package com.communeo.mobile.android.features.session.ui.models
 
-import com.communeo.common.data.models.user.AuthenticatedUser
+import com.communeo.mobile.android.features.business.users.data.models.AuthenticatedUser
 
 data class SessionUiState(
     val sessionErrorMessage: String?,

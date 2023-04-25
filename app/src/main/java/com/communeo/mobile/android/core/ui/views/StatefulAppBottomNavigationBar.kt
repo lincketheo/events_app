@@ -1,4 +1,4 @@
-package com.communeo.mobile.android.core.ui.components
+package com.communeo.mobile.android.core.ui.views
 
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
@@ -6,10 +6,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.navigation.NavHostController
+import com.communeo.mobile.android.core.ui.models.BottomNavigationBarState
+import com.communeo.mobile.android.core.ui.models.FloatingActionButtonState
 import com.communeo.mobile.android.core.ui.navigation.BottomAppBarDestination
 import com.communeo.mobile.android.core.ui.util.getCurrentDestinationOrStart
-import com.example.events.ui.models.common.BottomNavigationBarState
-import com.example.events.ui.models.common.FloatingActionButtonState
 
 @Composable
 fun StatefulAppBottomNavigationBar(

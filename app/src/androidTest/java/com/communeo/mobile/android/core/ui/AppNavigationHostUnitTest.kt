@@ -1,10 +1,11 @@
 package com.communeo.mobile.android.core.ui
 
 import androidx.navigation.NavHostController
+import com.communeo.mobile.android.core.ui.models.BottomNavigationBarState
+import com.communeo.mobile.android.core.ui.models.FloatingActionButtonState
 import com.communeo.mobile.android.core.ui.navigation.BottomAppBarDestination
+import com.communeo.mobile.android.core.ui.views.AppNavigationHost
 import com.communeo.mobile.android.util.BaseComposeRuleTest
-import com.example.events.ui.models.common.BottomNavigationBarState
-import com.example.events.ui.models.common.FloatingActionButtonState
 import com.google.common.truth.Truth
 import org.junit.Before
 import org.junit.Test

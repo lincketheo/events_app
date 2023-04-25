@@ -9,8 +9,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import com.communeo.mobile.android.R
+import com.communeo.mobile.android.core.ui.models.FloatingActionButtonState
 import com.communeo.mobile.android.features.feed.ui.models.CommentUiState
-import com.example.events.ui.models.common.FloatingActionButtonState
 
 @Composable
 fun FeedItemActionBar(

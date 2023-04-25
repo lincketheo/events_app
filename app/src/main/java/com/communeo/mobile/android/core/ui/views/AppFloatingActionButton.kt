@@ -1,4 +1,4 @@
-package com.communeo.mobile.android.core.ui.components
+package com.communeo.mobile.android.core.ui.views
 
 import androidx.compose.animation.animateContentSize
 import androidx.compose.material3.ExtendedFloatingActionButton

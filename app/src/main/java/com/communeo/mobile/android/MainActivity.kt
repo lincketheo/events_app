@@ -8,8 +8,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.communeo.mobile.android.core.ui.AppEntryPoint
 import com.communeo.mobile.android.core.ui.theme.CommuneoAndroidTheme
+import com.communeo.mobile.android.core.ui.views.AppEntryPoint
 import com.communeo.mobile.android.features.session.ui.viewmodels.SessionViewModel
 import dagger.hilt.android.AndroidEntryPoint
 

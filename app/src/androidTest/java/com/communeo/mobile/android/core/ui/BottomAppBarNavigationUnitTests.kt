@@ -5,6 +5,7 @@ import androidx.navigation.NavHostController
 import com.communeo.mobile.android.core.ui.components.semantics.appBottomBarSemantics
 import com.communeo.mobile.android.core.ui.components.semantics.floatingActionButtonSemantics
 import com.communeo.mobile.android.core.ui.navigation.BottomAppBarDestination
+import com.communeo.mobile.android.core.ui.views.StatefulAppLayout
 import com.communeo.mobile.android.features.feed.ui.views.semantics.feedEntryPointSemantics
 import com.communeo.mobile.android.features.profile.ui.views.semantics.profileEntryPointSemantics
 import com.communeo.mobile.android.features.search.ui.views.semantics.searchEntryPointSemantics

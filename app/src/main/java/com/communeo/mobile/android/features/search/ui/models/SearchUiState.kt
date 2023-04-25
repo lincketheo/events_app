@@ -1,6 +1,6 @@
 package com.communeo.mobile.android.features.search.ui.models
 
-import com.communeo.common.data.repository.queries.EventsFilter
+import com.communeo.mobile.android.features.business.events.data.models.EventFilter
 
 /**
  * TODO - split this into several classes to minimize copies of large lists
@@ -10,7 +10,7 @@ data class SearchUiState(
     val currentQueryText: String,
     val peopleFilterSelected: Boolean,
     val eventsFilterSelected: Boolean,
-    val eventsFilter: EventsFilter?, // have memory of filter when toggling
+    val eventsFilter: EventFilter?, // have memory of filter when toggling
     val searchResults: List<SearchResult>, // order matters
     val searchSuggestions: List<String>,
     val isLoading: Boolean,

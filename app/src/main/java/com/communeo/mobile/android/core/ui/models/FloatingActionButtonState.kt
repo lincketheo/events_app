@@ -1,4 +1,4 @@
-package com.example.events.ui.models.common
+package com.communeo.mobile.android.core.ui.models
 
 sealed interface FloatingActionButtonState {
     sealed interface Visible : FloatingActionButtonState {
