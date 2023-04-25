@@ -1,6 +1,6 @@
 package com.communeo.mobile.android.features.feed.ui.models
 
-import com.communeo.common.data.models.feed.Event
+import com.communeo.common.data.models.event.Event
 
 data class FeedEventCardUiState(
     val event: Event,

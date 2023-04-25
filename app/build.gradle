@@ -109,8 +109,8 @@ dependencies {
     // Image carousel
     implementation 'com.google.accompanist:accompanist-pager:0.28.0'
 
-    // Local
-    implementation(fileTree(dir: "/home/theo/Development/projects/communeo/communeo-common/build/libs", includes: ["*.jar"]))
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
 
     // Multiplatform Aware libraries
     implementation "io.github.aakira:napier:2.6.1"

@@ -23,7 +23,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import com.communeo.common.data.models.feed.comments.CommentContent
+import com.communeo.common.data.models.event.comments.CommentContent
 import com.communeo.mobile.android.R
 import com.communeo.mobile.android.features.feed.ui.models.CommentUiState
 import java.lang.StrictMath.min
